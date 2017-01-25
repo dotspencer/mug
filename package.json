@@ -1,0 +1,12 @@
+{
+  "name": "mug",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-sftp": "^0.1.5"
+  }
+}
