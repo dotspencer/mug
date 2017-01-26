@@ -1,7 +1,13 @@
 var gulp = require('gulp'),
-    sftp = require('gulp-sftp');
+    inject = require('gulp-inject');
 
-gulp.task('upload', function(){
-  gulp.src(__dirname + '/source/*.txt')
-    .pipe(gulp.dest(__dirname + '/public/'));
+gulp.task('default', function(){
+
+  var target = gulp.src(__dirname + '/source/index.html');
+  var sources = gulp.src(['./source/*.js', './source/*.css']);
+
+  console.log(target);
+
+  target.pipe(sources)
+    .pipe(gulp.dest('./public'));
 });

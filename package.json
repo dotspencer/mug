@@ -7,6 +7,6 @@
   "license": "ISC",
   "devDependencies": {
     "gulp": "^3.9.1",
-    "gulp-sftp": "^0.1.5"
+    "gulp-inject": "^4.2.0"
   }
 }
