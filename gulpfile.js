@@ -1,13 +1,9 @@
 var gulp = require('gulp'),
-    inject = require('gulp-inject');
+  inline = require('gulp-inline-source');
 
 gulp.task('default', function(){
 
-  var target = gulp.src(__dirname + '/source/index.html');
-  var sources = gulp.src(['./source/*.js', './source/*.css']);
-
-  console.log(target);
-
-  target.pipe(sources)
+  return gulp.src('./source/index.html')
+    .pipe(inline())
     .pipe(gulp.dest('./public'));
 });
